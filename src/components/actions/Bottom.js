@@ -28,6 +28,9 @@ function Bottom({ context }) {
     downloadLink.download = "canvas_image.png";
     downloadLink.click();
     localStorage.setItem("canvas-img", dataURL);
+    toast("Saved!", {
+      icon: "😁",
+    });
   }
   return (
     <div className="flex justify-center align-center text-white mt-5">

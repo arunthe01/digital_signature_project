@@ -1,4 +1,5 @@
 import React from "react";
+import "./Modifiers.css";
 
 function Modifiers({ setCanvasStyles, canvasStyles }) {
   const handleChange = (e) => {
@@ -7,7 +8,7 @@ function Modifiers({ setCanvasStyles, canvasStyles }) {
   };
 
   return (
-    <div className="flex Class justify-between align-center">
+    <div className="flex Class justify-center align-center modifiers p-2">
       <div className="mr-10">
         <label> Stroke color</label>
         <br />

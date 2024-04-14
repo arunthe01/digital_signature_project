@@ -12,13 +12,15 @@ function App() {
   });
   const [context, setContext] = useState(null);
   return (
-    <div className="App absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col text-center">
-      <Modifiers
-        setCanvasStyles={setCanvasStyles}
-        canvasStyles={canvasStyles}
-      />
-      <Canvas canvasStyles={canvasStyles} setContext={setContext} />
-      <Bottom context={context} />
+    <div>
+      <div className="App absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col text-center">
+        <Modifiers
+          setCanvasStyles={setCanvasStyles}
+          canvasStyles={canvasStyles}
+        />
+        <Canvas canvasStyles={canvasStyles} setContext={setContext} />
+        <Bottom context={context} />
+      </div>
     </div>
   );
 }
