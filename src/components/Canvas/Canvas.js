@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 function Canvas({ canvasStyles, setContext }) {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
-  const [eraserMode, setEraserMode] = useState(false);
+  //const [eraserMode, setEraserMode] = useState(false);
 
   useEffect(() => {
     setContext(canvasRef.current);
