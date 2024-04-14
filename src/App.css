@@ -1,0 +1,16 @@
+input[type="color"] {
+	-webkit-appearance: none;
+	border: 3px solid grey;
+	width: 32px;
+	height: 32px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px grey;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+    border-radius: 50%;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+    border-radius: 50%;
+}
