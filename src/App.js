@@ -2,7 +2,9 @@ import "./App.css";
 import Modifiers from "./components/Cursor_Modifiers/Modifiers";
 import Canvas from "./components/Canvas/Canvas";
 import Bottom from "./components/actions/Bottom";
+import Header from "./components/header/Header";
 import { useState } from "react";
+import CopyRights from "./components/copyrights/CopyRights";
 
 function App() {
   const [canvasStyles, setCanvasStyles] = useState({
@@ -13,7 +15,8 @@ function App() {
   const [context, setContext] = useState(null);
   return (
     <div>
-      <div className="App absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col text-center">
+      <Header />
+      <div className="w-full block flex flex-col align-center justify-center text-center mt-10">
         <Modifiers
           setCanvasStyles={setCanvasStyles}
           canvasStyles={canvasStyles}
@@ -21,6 +24,7 @@ function App() {
         <Canvas canvasStyles={canvasStyles} setContext={setContext} />
         <Bottom context={context} />
       </div>
+      <CopyRights />
     </div>
   );
 }

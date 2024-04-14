@@ -66,7 +66,7 @@ function Canvas({ canvasStyles, setContext }) {
   }, [isDrawing]);
 
   return (
-    <div className="mt-2">
+    <div className="mx-auto">
       <canvas
         ref={canvasRef}
         name="signature"

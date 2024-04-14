@@ -7,6 +7,9 @@ function Bottom({ context }) {
     console.log(canvas);
     const ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    toast("Cleared!", {
+      icon: "🧹",
+    });
   }
 
   function restore() {
