@@ -54,9 +54,9 @@ function Canvas({ canvasStyles, setContext }) {
       setIsDrawing(false);
     };
 
-    const toggleEraserMode = () => {
-      setEraserMode(!eraserMode);
-    };
+    // const toggleEraserMode = () => {
+    //   setEraserMode(!eraserMode);
+    // };
 
     canvas.addEventListener("mousedown", handleMouseDown);
     canvas.addEventListener("mousemove", handleMouseMove);
