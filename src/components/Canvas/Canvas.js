@@ -41,12 +41,8 @@ function Canvas({ canvasStyles, setContext }) {
       const offsetX = event.clientX - rect.left;
       const offsetY = event.clientY - rect.top;
       if (isDrawing) {
-        if (eraserMode) {
-          ctx.clearRect(offsetX - 5, offsetY - 5, 30, 30);
-        } else {
-          ctx.lineTo(offsetX, offsetY);
-          ctx.stroke();
-        }
+        ctx.lineTo(offsetX, offsetY);
+        ctx.stroke();
       }
     };
 
@@ -67,7 +63,7 @@ function Canvas({ canvasStyles, setContext }) {
       canvas.removeEventListener("mousemove", handleMouseMove);
       canvas.removeEventListener("mouseup", handleMouseUp);
     };
-  }, [isDrawing, eraserMode]);
+  }, [isDrawing]);
 
   return (
     <div className="mt-2">
